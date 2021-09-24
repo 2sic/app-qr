@@ -1,0 +1,10 @@
+@inherits Custom.Hybrid.Razor12
+@using ToSic.Razor.Blade;
+
+<div class="sc-element">
+	@Content.Toolbar
+	<a href="@Content.Tab.FullUrl">
+    <img src="//api.qrserver.com/v1/create-qr-code/?color=@Content.Presentation.Color&bgcolor=[Presentation:BackgroundColor]&qzone=[Presentation:Border]&size=[Presentation:Size]x[Presentation:Size]&ecc=[Presentation:ErrorCorrection]&data=[Tab:FullUrl]&margin=0" />
+	</a>
+	<div style="display: [Presentation:ShowLinkOrTitleBelow]">@Settings.Tab.Title</div>
+</div>
