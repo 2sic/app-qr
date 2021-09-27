@@ -1,9 +1,19 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
-<div class="sc-element">
-	@Content.Toolbar
+@{
+  // querystring for qr-code
+  var urlParams = 
+    "color=" + Content.Presentation.Color
+    + "&bgcolor=" + Content.Presentation.BackgroundColor
+	+ "&qzone=" + Content.Presentation.Border
+	+ "&size=" + Content.Presentation.Size.ToString() + "x" + Content.Presentation.Size.ToString()
+	+ "&ecc=" + Content.Presentation.ErrorCorrection
+	+ "&data=" + Content.Link
+	+ "&margin=" + 0;
+}
+<div @Edit.TagToolbar(Content)>
 	<a href="@Content.Link">
-    <img src="//api.qrserver.com/v1/create-qr-code/?color=@Content.Presentation.Color&bgcolor=[Presentation:BackgroundColor]&qzone=[Presentation:Border]&size=[Presentation:Size]x[Presentation:Size]&ecc=[Presentation:ErrorCorrection]&data=@Content.Link&margin=0" />
+    	<img src="//api.qrserver.com/v1/create-qr-code/?@urlParams" />
 	</a>
-	<div style="display: [Presentation:ShowLinkOrTitleBelow]">@Content.Link</div>
+	<div style="display: @Content.Presentation.ShowLinkOrTitleBelow">@Content.Link</div>
 </div>
