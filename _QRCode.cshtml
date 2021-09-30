@@ -3,12 +3,12 @@
 @{
   // sets qrlink to specified url  
   var qrLink = Content.Link;
-  if (!Settings.isBasic) {
+  if (!Settings.IsBasic) {
     // sets link to page url if not basic  
     qrLink = Link.To(parameters: CmsContext.Page.Parameters);
-    if (Settings.isShort || Settings.isHiddenAndPrintable) {
-        // sets link to shorter page url
-        qrLink = CmsContext.Site.Url + "/tabid/" + CmsContext.Page.Id;
+    if (Settings.IsShort || Settings.IsHiddenAndPrintable) {
+      // sets link to shorter page url
+      qrLink = CmsContext.Site.Url + "/tabid/" + CmsContext.Page.Id;
     }
   }
 
@@ -16,34 +16,34 @@
   var urlParams = 
     "color=" + Content.Presentation.Color
     + "&bgcolor=" + Content.Presentation.BackgroundColor
-	+ "&qzone=" + Content.Presentation.Border
-	+ "&size=" + Content.Presentation.Size.ToString() + "x" + Content.Presentation.Size.ToString()
-	+ "&ecc=" + Content.Presentation.ErrorCorrection
-	+ "&data=" + qrLink
-	+ "&margin=" + 0;
+    + "&qzone=" + Content.Presentation.Border
+    + "&size=" + Content.Presentation.Size.ToString() + "x" + Content.Presentation.Size.ToString()
+    + "&ecc=" + Content.Presentation.ErrorCorrection
+    + "&data=" + qrLink
+    + "&margin=" + 0;
 }
 
-<div @Edit.TagToolbar(Content) class='@(Settings.isHiddenAndPrintable ? "qr-print-only" : "")'>
-	@if (!Settings.isHiddenAndPrintable) {
-        @:<a href='@(Settings.isShort ? "//" + qrLink : qrLink)'>
-    }
-    <img src="//api.qrserver.com/v1/create-qr-code/?@urlParams"/>
-    @if (!Settings.isHiddenAndPrintable) {
-        @:</a>
-    }
-	@if (Settings.isBasic) {
-        // set display text based on view settings
-        var displayText = Settings.hasTitle ? Content.Title : Content.Link;
-        <div style="display: @Content.Presentation.ShowLinkOrTitleBelow">@displayText</div>
-    }
+<div @Edit.TagToolbar(Content) class='@(Settings.IsHiddenAndPrintable ? "app-qrcode2-print-only" : "")'>
+  @if (!Settings.IsHiddenAndPrintable) {
+    @:<a href='@(Settings.isShort ? "//" + qrLink : qrLink)'>
+  }
+  <img src="//api.qrserver.com/v1/create-qr-code/?@urlParams"/>
+  @if (!Settings.IsHiddenAndPrintable) {
+    @:</a>
+  }
+  @if (Settings.IsBasic) {
+    // set display text based on view settings
+    var displayText = Settings.HasTitle ? Content.Title : Content.Link;
+    <div style="display: @Content.Presentation.ShowLinkOrTitleBelow">@displayText</div>
+  }
 </div>
 
 <style>
   @@media screen {
-    .qr-print-only { display: none; }
+    .app-qrcode2-print-only { display: none; }
   }
 
   @@media print{
-    .qr-print-only { display: block; }
+    .app-qrcode2-print-only { display: block; }
   }
 </style>
