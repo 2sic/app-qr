@@ -1,42 +1,38 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
 @{
+  var printOnly = CmsContext.View.Identifier == "print";
+
   // sets qrlink to specified url  
-  var qrLink = Content.Link;
-  if (!Settings.IsBasic) {
-    // sets link to page url if not basic  
-    qrLink = Link.To(parameters: CmsContext.Page.Parameters);
-    if (Settings.IsShort || Settings.IsHiddenAndPrintable) {
-      // sets link to shorter page url
-      qrLink = CmsContext.Site.Url + "/tabid/" + CmsContext.Page.Id;
-    }
-  }
+  var qrLink = Content.LinkCurrentPage ? Link.To(parameters: CmsContext.Page.Parameters) : Content.Link;
 
   // url params for qr-code
   var urlParams = 
     "color=" + Content.Presentation.Color
     + "&bgcolor=" + Content.Presentation.BackgroundColor
     + "&qzone=" + Content.Presentation.Border
-    + "&size=" + Content.Presentation.Size.ToString() + "x" + Content.Presentation.Size.ToString()
+    + "&size=" + Content.Presentation.Size + "x" + Content.Presentation.Size
     + "&ecc=" + Content.Presentation.ErrorCorrection
     + "&data=" + qrLink
     + "&margin=" + 0;
 }
 
-<div @Edit.TagToolbar(Content) class='@(Settings.IsHiddenAndPrintable ? "app-qrcode2-print-only" : "")'>
-  @if (!Settings.IsHiddenAndPrintable) {
-    @:<a href='@(Settings.isShort ? "//" + qrLink : qrLink)'>
-  }
-  <img src="//api.qrserver.com/v1/create-qr-code/?@urlParams"/>
-  @if (!Settings.IsHiddenAndPrintable) {
-    @:</a>
-  }
-  @if (Settings.IsBasic) {
-    // set display text based on view settings
-    var displayText = Settings.HasTitle ? Content.Title : Content.Link;
+
+<div @Edit.TagToolbar(Content) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
+  <a href='@qrLink'>
+    <img src="//api.qrserver.com/v1/create-qr-code/?@urlParams"/>
+  </a>
+  @if(Content.DisplayLinkOrTitle) {
+    var displayText = Text.Has(Content.Title) ? Content.Title : Content.Link;
     <div style="display: @Content.Presentation.ShowLinkOrTitleBelow">@displayText</div>
   }
 </div>
+
+@if(printOnly && Edit.Enabled) {
+  <div @Edit.TagToolbar(Content)>
+    @Resources.PrintQrAdminHint    
+  </div>
+}
 
 <style>
   @@media screen {
@@ -46,4 +42,4 @@
   @@media print{
     .app-qrcode2-print-only { display: block; }
   }
-</style>
+</style> 
