@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-30T16:20:54.8351993+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-30T16:31:19.720867+02:00">
   <Header>
     <App Guid="1566f9d3-9580-4b0d-83de-51d34b04c5f7" />
     <Language Default="en-us" />
@@ -760,68 +760,6 @@
         <Dimension DimensionID="8" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="23772909-d007-4015-ab66-d25dbda1015f" Json="True">
-      <Value Key="ContentDemoEntity" Value="d2fa3bc0-ced2-45ff-99b6-bf38b7e40e62" Type="Entity" />
-      <Value Key="ContentTypeStaticName" Value="14ce1b3c-e00b-46de-8ae3-2819a6ea7a33" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="Icon" Value="" Type="Hyperlink">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="Identifier" Value="" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="IsHidden" Value="False" Type="Boolean">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="ListContentTypeStaticName" Value="" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="ListPresentationTypeStaticName" Value="" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="Location" Value="Site" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="Name" Value="QR Code mit Titel" Type="String">
-        <Dimension DimensionID="8" ReadOnly="false" />
-      </Value>
-      <Value Key="Name" Value="QR Code with title" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="Path" Value="_QRCode.cshtml" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="PresentationDemoEntity" Value="20b7dd4a-204f-44bd-bf27-7ed2960b85ac" Type="Entity" />
-      <Value Key="PresentationTypeStaticName" Value="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="PublishData" Value="False" Type="Boolean">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="SearchIndexingDisabled" Value="False" Type="Boolean">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="SearchIndexingStreams" Value="" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="Settings" Value="null" Type="Entity" />
-      <Value Key="StreamsToPublish" Value="" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="Type" Value="C# Razor" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="UseForList" Value="False" Type="Boolean">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="ViewController" Value="" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-      <Value Key="ViewNameInUrl" Value="" Type="String">
-        <Dimension DimensionID="7" ReadOnly="false" />
-      </Value>
-    </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="d831e132-d352-4d35-a33b-19ca66aa157c" Json="True">
       <Value Key="ContentDemoEntity" Value="d2fa3bc0-ced2-45ff-99b6-bf38b7e40e62" Type="Entity" />
       <Value Key="ContentTypeStaticName" Value="14ce1b3c-e00b-46de-8ae3-2819a6ea7a33" Type="String">
@@ -848,7 +786,7 @@
       <Value Key="Name" Value="QR Code basic, optionale Anzeige der URL" Type="String">
         <Dimension DimensionID="8" ReadOnly="false" />
       </Value>
-      <Value Key="Name" Value="QR Code basic optionally showing URL" Type="String">
+      <Value Key="Name" Value="QR Code optionally showing URL or title" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="Path" Value="_QRCode.cshtml" Type="String">
@@ -949,7 +887,7 @@
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="78dd36c5-25ef-42f5-97a0-37a7ee16dba4" Json="True">
       <Value Key="Content" Value="null" Type="Entity" />
       <Value Key="Presentation" Value="null" Type="Entity" />
-      <Value Key="Template" Value="23772909-d007-4015-ab66-d25dbda1015f" Type="Entity" />
+      <Value Key="Template" Value="d831e132-d352-4d35-a33b-19ca66aa157c" Type="Entity" />
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="fcf0beff-7a99-4833-b106-775d5bb2f2f2" Json="True">
       <Value Key="Content" Value="null" Type="Entity" />
@@ -1076,7 +1014,7 @@
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="96b1c91a-c6c4-4876-a8ef-08945bac6e49" Json="True">
       <Value Key="Content" Value="null" Type="Entity" />
       <Value Key="Presentation" Value="null" Type="Entity" />
-      <Value Key="Template" Value="23772909-d007-4015-ab66-d25dbda1015f" Type="Entity" />
+      <Value Key="Template" Value="null" Type="Entity" />
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="33b435fb-00f7-4280-a813-23efae8e9c33" Json="True">
       <Value Key="Template" Value="null" Type="Entity" />
