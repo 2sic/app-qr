@@ -20,7 +20,7 @@
 
 <div @Edit.TagToolbar(Content) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
   <a href='@qrLink'>
-    <img src="//api.qrserver.com/v1/create-qr-code/?@urlParams"/>
+    <img loading="lazy" src="//api.qrserver.com/v1/create-qr-code/?@urlParams"/>
   </a>
   @if(Content.DisplayLinkOrTitle) {
     var displayText = Text.Has(Content.Title) ? Content.Title : Content.Link;
