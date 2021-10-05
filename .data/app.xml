@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-30T16:31:19.720867+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-10-05T07:48:32.6133588+02:00">
   <Header>
     <App Guid="1566f9d3-9580-4b0d-83de-51d34b04c5f7" />
     <Language Default="en-us" />
@@ -64,7 +64,78 @@
       </Attributes>
     </AttributeSet>
     <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
-      <Attributes />
+      <Attributes>
+        <Attribute StaticName="Title" Type="String" IsTitle="true">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="dd2d6ed7-08ef-43bf-80f6-977e9d0a9164" Json="True" KeyNumber="4879">
+            <Value Key="InputType" Value="string-default" Type="String" />
+            <Value Key="Name" Value="Title" Type="String" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="QrCodeSettings" Type="Entity" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="0d010760-ed7f-4204-b5d5-32098b8a7ebf" Json="True" KeyNumber="4880">
+            <Value Key="CustomJavaScript" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="DefaultValue" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Disabled" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="DisableTranslation" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="InputType" Value="entity-default" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Name" Value="QR Code Settings - Default for all Outputs" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Notes" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Placeholder" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Required" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="ValidationRegExJavaScript" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+          </Entity>
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Entity" AttributeSetName="@Entity" EntityGUID="6940c2ce-8c42-4489-a762-f9513f814cfe" Json="True" KeyNumber="4880">
+            <Value Key="AllowMultiValue" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EnableAddExisting" Value="True" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EnableCreate" Value="True" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EnableDelete" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EnableEdit" Value="True" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EnableRemove" Value="True" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EntityType" Value="QrCodeSettings" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Prefill" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+          </Entity>
+        </Attribute>
+      </Attributes>
     </AttributeSet>
     <AttributeSet StaticName="14ce1b3c-e00b-46de-8ae3-2819a6ea7a33" Name="Link" Description="Link" Scope="2SexyContent" AlwaysShareConfiguration="false">
       <Attributes>
@@ -362,9 +433,131 @@
             </Value>
           </Entity>
         </Attribute>
+        <Attribute StaticName="VarOverrideQrSettings" Type="Boolean" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="68515ac8-4646-4266-820a-979067a766ed" Json="True" KeyNumber="4882">
+            <Value Key="CustomJavaScript" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="DefaultValue" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Disabled" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="DisableTranslation" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Formulas" Value="b923cc5a-fe78-400e-b196-abcbe81b9e94,33a60092-07b1-46c6-9c1e-e03a9e754910" Type="Entity" />
+            <Value Key="InputType" Value="boolean-default" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Name" Value="VarOverrideQrSettings" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Notes" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Placeholder" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Required" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="ValidationRegExJavaScript" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+          </Entity>
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Boolean" AttributeSetName="@Boolean" EntityGUID="cf9c4031-16ce-42b0-b9c0-c3910dea0212" Json="True" KeyNumber="4882">
+            <Value Key="TitleFalse" Value="Use standard settings for size, colors etc." Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="TitleFalse" Value="Standardeinstellungen verwenden für Farbe, Grösse etc." Type="String">
+              <Dimension DimensionID="8" ReadOnly="false" />
+            </Value>
+            <Value Key="TitleIndeterminate" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="TitleTrue" Value="Override settings to use custom size, colors etc." Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="TitleTrue" Value="Eigene Einstellungen verwenden für Farbe, Grösse etc." Type="String">
+              <Dimension DimensionID="8" ReadOnly="false" />
+            </Value>
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="QrCodeSettings" Type="Entity" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="f36e63b5-8ac7-4e2e-b499-6faca3b90e63" Json="True" KeyNumber="4881">
+            <Value Key="CustomJavaScript" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="DefaultValue" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Disabled" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="DisableTranslation" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Formulas" Value="52d362e7-ba84-494e-b027-0038af375466" Type="Entity" />
+            <Value Key="InputType" Value="entity-default" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Name" Value="QR Code Settings - leave empty to use defaults" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Name" Value="QR Code Einstellungen - leer belassen um Standardeinstellungen zu nutzen" Type="String">
+              <Dimension DimensionID="8" ReadOnly="false" />
+            </Value>
+            <Value Key="Notes" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Placeholder" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Required" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="ValidationRegExJavaScript" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+          </Entity>
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Entity" AttributeSetName="@Entity" EntityGUID="ccc32a38-e11f-4113-8ad6-d3495fcba327" Json="True" KeyNumber="4881">
+            <Value Key="AllowMultiValue" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EnableAddExisting" Value="True" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EnableCreate" Value="True" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EnableDelete" Value="False" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EnableEdit" Value="True" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EnableRemove" Value="True" Type="Boolean">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="EntityType" Value="QrCodeSettings" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+            <Value Key="Prefill" Value="" Type="String">
+              <Dimension DimensionID="7" ReadOnly="false" />
+            </Value>
+          </Entity>
+        </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" Name="QR Configuration" Description="QR Configuration" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" Name="QrCodeSettings" Description="QR Configuration" Scope="2SexyContent" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="7d5f5c58-8a95-405e-b753-2f20f52ccad7" Json="True" KeyNumber="435">
@@ -751,7 +944,12 @@
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="a6206d7a-ede1-4420-a347-e9c4211b84e6" KeyNumber="11" />
+    <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="a6206d7a-ede1-4420-a347-e9c4211b84e6" KeyNumber="11">
+      <Value Key="QrCodeSettings" Value="20b7dd4a-204f-44bd-bf27-7ed2960b85ac" Type="Entity" />
+      <Value Key="Title" Value="QR App Settings" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+    </Entity>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="ca0850a8-3db7-4850-9509-b3205670b1a9" KeyNumber="11">
       <Value Key="PrintQrAdminHint" Value="Here is an invisible print-only QR Code" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
@@ -768,7 +966,7 @@
       <Value Key="Icon" Value="" Type="Hyperlink">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Identifier" Value="" Type="String">
+      <Value Key="Identifier" Value="show" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="IsHidden" Value="False" Type="Boolean">
@@ -792,8 +990,7 @@
       <Value Key="Path" Value="_QRCode.cshtml" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="PresentationDemoEntity" Value="20b7dd4a-204f-44bd-bf27-7ed2960b85ac" Type="Entity" />
-      <Value Key="PresentationTypeStaticName" Value="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" Type="String">
+      <Value Key="PresentationTypeStaticName" Value="" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="PublishData" Value="False" Type="Boolean">
@@ -805,7 +1002,6 @@
       <Value Key="SearchIndexingStreams" Value="" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Settings" Value="null" Type="Entity" />
       <Value Key="StreamsToPublish" Value="" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
@@ -854,8 +1050,7 @@
       <Value Key="Path" Value="_QRCode.cshtml" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="PresentationDemoEntity" Value="20b7dd4a-204f-44bd-bf27-7ed2960b85ac" Type="Entity" />
-      <Value Key="PresentationTypeStaticName" Value="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" Type="String">
+      <Value Key="PresentationTypeStaticName" Value="" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="PublishData" Value="False" Type="Boolean">
@@ -911,16 +1106,19 @@
       <Value Key="Description" Value="QR Konfiguration" Type="String">
         <Dimension DimensionID="8" ReadOnly="false" />
       </Value>
-      <Value Key="EditInstructions" Value="" Type="String">
+      <Value Key="DynamicChildrenField" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="EditInstructions" Value="&lt;p&gt;You can customize how the QR code looks - but in general you should better just set the defaults as you want them, and not customize each one.&amp;nbsp;&lt;/p&gt;" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="Icon" Value="" Type="Hyperlink">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Label" Value="QR Configuration" Type="String">
+      <Value Key="Label" Value="QR Code Settings" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Label" Value="QR Konfiguration" Type="String">
+      <Value Key="Label" Value="QR Code Einstellungen" Type="String">
         <Dimension DimensionID="8" ReadOnly="false" />
       </Value>
       <Value Key="Link" Value="" Type="Hyperlink">
@@ -978,14 +1176,14 @@
       <Value Key="NotesInternal" Value="&lt;p&gt;Dies ist ein Demo Element.&lt;/p&gt;" Type="String">
         <Dimension DimensionID="8" ReadOnly="false" />
       </Value>
-      <Value Key="Title" Value="Installing checklist" Type="String">
+      <Value Key="Title" Value="Installation checklist" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Title" Value="Installations Checkliste" Type="String">
+      <Value Key="Title" Value="Installations-Checkliste" Type="String">
         <Dimension DimensionID="8" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" AttributeSetName="QR Configuration" EntityGUID="20b7dd4a-204f-44bd-bf27-7ed2960b85ac">
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" AttributeSetName="QrCodeSettings" EntityGUID="20b7dd4a-204f-44bd-bf27-7ed2960b85ac">
       <Value Key="BackgroundColor" Value="FFFFFF" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
@@ -1004,10 +1202,10 @@
       <Value Key="Size" Value="200" Type="Number">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Title" Value="Demo Configuration" Type="String">
+      <Value Key="Title" Value="App Defaults Configuration (careful when you change this)" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Title" Value="Demo Konfiguration" Type="String">
+      <Value Key="Title" Value="Standardeinstellungen - mit Vorsicht anzupassen" Type="String">
         <Dimension DimensionID="8" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1033,6 +1231,106 @@
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="Title" Value="Setting Visible" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="b8d22529-107e-4337-ab66-f51b6f2430b7" Json="True">
+      <Value Key="Content" Value="1c2b12e8-949d-4ac3-a383-a9d727e03574" Type="Entity" />
+      <Value Key="Presentation" Value="null" Type="Entity" />
+      <Value Key="Template" Value="d831e132-d352-4d35-a33b-19ca66aa157c" Type="Entity" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="14ce1b3c-e00b-46de-8ae3-2819a6ea7a33" AttributeSetName="Link" EntityGUID="1c2b12e8-949d-4ac3-a383-a9d727e03574">
+      <Value Key="DisplayLinkOrTitle" Value="False" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Link" Value="" Type="Hyperlink">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="LinkCurrentPage" Value="True" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="NotesInternal" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="QrCodeSettings" Value="089c4aa4-e9fb-40b6-9ed8-4c0e72dc6a67" Type="Entity" />
+      <Value Key="Title" Value="Link to Current Page" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="VarOverrideQrSettings" Value="True" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="772dfff1-b236-4aa9-8359-5f53c08ff7bf" AttributeSetName="UiFormula" EntityGUID="b923cc5a-fe78-400e-b196-abcbe81b9e94" Json="True">
+      <Value Key="Enabled" Value="True" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Formula" Value="v1(data, context) { return data.QrCodeSettings.length == 0; }" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Notes" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Target" Value="Field.Settings.Visible" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Setting Visible" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="772dfff1-b236-4aa9-8359-5f53c08ff7bf" AttributeSetName="UiFormula" EntityGUID="33a60092-07b1-46c6-9c1e-e03a9e754910" Json="True">
+      <Value Key="Enabled" Value="True" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Formula" Value="v1(data, context) {&#xA;  if (context.cache.alreadyRun) return data.value;&#xA;  context.cache.alreadyRun = true;&#xA;  return data.QrCodeSettings.length &gt; 0;&#xA;}" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Notes" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Target" Value="Field.Value" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Value" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="772dfff1-b236-4aa9-8359-5f53c08ff7bf" AttributeSetName="UiFormula" EntityGUID="52d362e7-ba84-494e-b027-0038af375466" Json="True">
+      <Value Key="Enabled" Value="True" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Formula" Value="v1(data, context) { return data.QrCodeSettings.length &gt; 0 || data.VarOverrideQrSettings; }" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Notes" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Target" Value="Field.Settings.Visible" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Setting Visible" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" AttributeSetName="QrCodeSettings" EntityGUID="089c4aa4-e9fb-40b6-9ed8-4c0e72dc6a67">
+      <Value Key="BackgroundColor" Value="FFFFFF" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Border" Value="1" Type="Number">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Color" Value="f542dd" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="ErrorCorrection" Value="L" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="ShowLinkOrTitleBelow" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Size" Value="200" Type="Number">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Experimental pink" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
     </Entity>

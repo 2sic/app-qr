@@ -6,15 +6,18 @@
   // sets qrlink to specified url  
   var qrLink = Content.LinkCurrentPage ? Link.To(parameters: CmsContext.Page.Parameters) : Content.Link;
 
+  // Use either the qr-code settings of the current item or use the defaults
+  var qrParams = Content.QrCodeSettings.EntityId != 0 ? Content.QrCodeSettings : App.Settings.QrCodeSettings;
+
   // url params for qr-code
   var urlParams = 
-    "color=" + Content.Presentation.Color
-    + "&bgcolor=" + Content.Presentation.BackgroundColor
-    + "&qzone=" + Content.Presentation.Border
-    + "&size=" + Content.Presentation.Size + "x" + Content.Presentation.Size
-    + "&ecc=" + Content.Presentation.ErrorCorrection
-    + "&data=" + qrLink
-    + "&margin=" + 0;
+    "color=" + qrParams.Color.Trim('#') // remove any # if there is one on the color-code
+    + "&bgcolor=" + qrParams.BackgroundColor.Trim('#') // remove any # if there is one on the color-code
+    + "&qzone=" + qrParams.Border
+    + "&size=" + qrParams.Size + "x" + qrParams.Size
+    + "&ecc=" + qrParams.ErrorCorrection
+    + "&margin=" + 0
+    + "&data=" + qrLink;
 }
 
 
@@ -24,12 +27,12 @@
   </a>
   @if(Content.DisplayLinkOrTitle) {
     var displayText = Text.Has(Content.Title) ? Content.Title : Content.Link;
-    <div style="display: @Content.Presentation.ShowLinkOrTitleBelow">@displayText</div>
+    <div style="display: @Content.DisplayLinkOrTitle">@displayText</div>
   }
 </div>
 
 @if(printOnly && Edit.Enabled) {
-  <div @Edit.TagToolbar(Content)>
+  <div class="alert alert-info" @Edit.TagToolbar(Content)>
     @Resources.PrintQrAdminHint    
   </div>
 }
