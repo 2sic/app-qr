@@ -7,20 +7,8 @@
   // sets qrlink to specified url  
   var qrLink = Content.LinkCurrentPage ? Link.To(parameters: CmsContext.Page.Parameters) : Content.Link;
 
-  // Use either the qr-code settings of the current item or use the defaults
-  var qrParams = Content.QrCodeSettings.EntityId != 0 ? Content.QrCodeSettings : App.Settings.QrCodeSettings;
-  
   // This ID is used to identify our unique code in the HTML DOM
   var qrDomId = "qr-code-js" + CmsContext.Module.Id;
-
-  // Activate turnOn - see https://r.2sxc.org/turnon
-  GetService<ToSic.Sxc.Web.IPageService>().Activate("turnOn");
-
-  var qrCodeOptions = new {
-    color = "#" + qrParams.Color.Trim('#'),
-    width = qrParams.Size,
-    height = qrParams.Size
-  };
 }
 
 <div @Edit.TagToolbar(Content) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
@@ -47,6 +35,20 @@
 }
 
 @* Include assets *@
+@{
+  // Use either the qr-code settings of the current item or use the defaults
+  var qrParams = Content.QrCodeSettings.EntityId != 0 ? Content.QrCodeSettings : App.Settings.QrCodeSettings;
+
+  // Activate turnOn - see https://r.2sxc.org/turnon
+  GetService<ToSic.Sxc.Web.IPageService>().Activate("turnOn");
+
+  // Passed to QrCode generation
+  var qrCodeOptions = new {
+    color = "#" + qrParams.Color.Trim('#'),
+    width = qrParams.Size,
+    height = qrParams.Size
+  };
+}
 <turnOn turn-on='{ "run": "window.appQr2.init()", "data": { "domId": "@qrDomId", "options": @Html.Raw(Convert.Json.ToJson(qrCodeOptions)) }}'></turnOn>
 <link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
 <script type="text/javascript" src="@App.Path/dist/scripts.min.js" data-enableoptimizations="bottom"></script>
