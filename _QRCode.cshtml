@@ -1,6 +1,7 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
 @{
+  // The view identifier determines if the code should be visible or only on printing
   var printOnly = CmsContext.View.Identifier == "print";
 
   // sets qrlink to specified url  
@@ -8,22 +9,17 @@
 
   // Use either the qr-code settings of the current item or use the defaults
   var qrParams = Content.QrCodeSettings.EntityId != 0 ? Content.QrCodeSettings : App.Settings.QrCodeSettings;
+  
+  // This ID is used to identify our unique code in the HTML DOM
+  var qrDomId = "qr-code-js" + CmsContext.Module.Id;
 
-  // url params for qr-code
-  var urlParams = 
-    "color=" + qrParams.Color.Trim('#') // remove any # if there is one on the color-code
-    + "&bgcolor=" + qrParams.BackgroundColor.Trim('#') // remove any # if there is one on the color-code
-    + "&qzone=" + qrParams.Border
-    + "&size=" + qrParams.Size + "x" + qrParams.Size
-    + "&ecc=" + qrParams.ErrorCorrection
-    + "&margin=" + 0
-    + "&data=" + qrLink;
+  // Activate turnOn - see https://r.2sxc.org/turnon
+  GetService<ToSic.Sxc.Web.IPageService>().Activate("turnOn");
 }
-
 
 <div @Edit.TagToolbar(Content) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
   <a href='@qrLink'>
-    <img loading="lazy" src="//api.qrserver.com/v1/create-qr-code/?@urlParams"/>
+    <div class="@qrDomId" qrContent="@qrLink" qrColor="#@qrParams.Color.Trim('#')" style="width: @(qrParams.Size)px; height: @(qrParams.Size)px;"></div>
   </a>
   @if(Content.DisplayLinkOrTitle) {
     var displayText = Text.Has(Content.Title) ? Content.Title : Content.Link;
@@ -31,18 +27,22 @@
   }
 </div>
 
+@* Show a special message to admins if the QR-Code is invisible otherwise *@
 @if(printOnly && Edit.Enabled) {
   <div class="alert alert-info" @Edit.TagToolbar(Content)>
     @Resources.PrintQrAdminHint    
   </div>
 }
 
-<style>
-  @@media screen {
-    .app-qrcode2-print-only { display: none; }
-  }
+@* These styles control the visibility of print-only QR-codes *@
+@if (printOnly) {
+  <style>
+    @@media screen { .app-qrcode2-print-only { display: none; } }
+    @@media print  { .app-qrcode2-print-only { display: block; } }
+  </style>
+}
 
-  @@media print{
-    .app-qrcode2-print-only { display: block; }
-  }
-</style> 
+@* Include assets *@
+<turnOn turn-on='{ "run": "window.appQr2.init()", "data": { "domId": "@qrDomId" } }'></turnOn>
+<link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
+<script type="text/javascript" src="@App.Path/dist/scripts.min.js" data-enableoptimizations="bottom"></script>

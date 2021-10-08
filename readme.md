@@ -28,6 +28,10 @@ The QR Code App has neither app settings nor app resources
 
 The App uses inline-styles and style tags, which you can directly adjust in the templates.
 
+## Special Thanks to
+
+https://papnkukn.github.io/qrcode-svg/ for an awesome JavaScript QR-Code Generator
+
 ## History
 
 * v01.00 ca. 2015
