@@ -15,12 +15,16 @@
 
   // Activate turnOn - see https://r.2sxc.org/turnon
   GetService<ToSic.Sxc.Web.IPageService>().Activate("turnOn");
+
+  var qrCodeOptions = new {
+    color = "#" + qrParams.Color.Trim('#'),
+    width = qrParams.Size,
+    height = qrParams.Size
+  };
 }
 
 <div @Edit.TagToolbar(Content) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
-  <a href='@qrLink'>
-    <div class="@qrDomId" qrContent="@qrLink" qrColor="#@qrParams.Color.Trim('#')" style="width: @(qrParams.Size)px; height: @(qrParams.Size)px;"></div>
-  </a>
+  <a class="@qrDomId" href='@qrLink'></a>
   @if(Content.DisplayLinkOrTitle) {
     var displayText = Text.Has(Content.Title) ? Content.Title : Content.Link;
     <div style="display: @Content.DisplayLinkOrTitle">@displayText</div>
@@ -43,6 +47,6 @@
 }
 
 @* Include assets *@
-<turnOn turn-on='{ "run": "window.appQr2.init()", "data": { "domId": "@qrDomId" } }'></turnOn>
+<turnOn turn-on='{ "run": "window.appQr2.init()", "data": { "domId": "@qrDomId", "options": @Html.Raw(Convert.Json.ToJson(qrCodeOptions)) }}'></turnOn>
 <link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
 <script type="text/javascript" src="@App.Path/dist/scripts.min.js" data-enableoptimizations="bottom"></script>
