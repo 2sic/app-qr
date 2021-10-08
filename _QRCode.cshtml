@@ -24,7 +24,7 @@
 }
 
 <div @Edit.TagToolbar(Content) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
-  <a class="@qrDomId" href='@qrLink'></a>
+  <a class="@qrDomId" href='@qrLink' target="_blank"></a>
   @if(Content.DisplayLinkOrTitle) {
     var displayText = Text.Has(Content.Title) ? Content.Title : Content.Link;
     <div style="display: @Content.DisplayLinkOrTitle">@displayText</div>
