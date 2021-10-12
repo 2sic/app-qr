@@ -13,8 +13,8 @@
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/TCmnZ17h) on [azing.org](https://azing.org/2sxc)
 | Source & License    | ✅    | included, ISC/MIT
-| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/qr-code-app-for-dnn-dotnetnuke)
-| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/qr-code-app-for-dnn-dotnetnuke)
+| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/qr-code-v2-hybrid-for-dnn-and-oqtane)
+| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/qr-code-v2-hybrid-for-dnn-and-oqtane)
 | Best Practices      | ✅    | Uses v12.05 conventions
 | Bootstrap 3         | ✅    | No optimizations needed
 | Bootstrap 4         | ✅    | No optimizations needed
