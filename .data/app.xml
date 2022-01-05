@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-10-12T09:06:09.5522909+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.00.01" ExportDate="2022-01-05T09:33:57.0646418+01:00">
   <Header>
     <App Guid="1566f9d3-9580-4b0d-83de-51d34b04c5f7" />
     <Language Default="en-us" />
@@ -9,7 +9,7 @@
     </Dimensions>
   </Header>
   <AttributeSets>
-    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="PrintQrAdminHint" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="fe3886a2-30f4-4202-8908-7743610ddd96" Json="True" KeyNumber="4873">
@@ -63,7 +63,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="dd2d6ed7-08ef-43bf-80f6-977e9d0a9164" Json="True" KeyNumber="4879">
@@ -137,7 +137,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="14ce1b3c-e00b-46de-8ae3-2819a6ea7a33" Name="Link" Description="Link" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="14ce1b3c-e00b-46de-8ae3-2819a6ea7a33" Name="Link" Description="Link" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="5de9c126-4272-4649-af6e-a9f8d1206ac3" Json="True" KeyNumber="432">
@@ -557,7 +557,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" Name="QrCodeSettings" Description="QR Configuration" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" Name="QrCodeSettings" Description="QR Configuration" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="7d5f5c58-8a95-405e-b753-2f20f52ccad7" Json="True" KeyNumber="435">
@@ -940,7 +940,7 @@
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="02.00.00" Type="String">
+      <Value Key="Version" Value="02.00.01" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1337,6 +1337,7 @@
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="95357063-44c6-455a-b273-9e3c3d68ecdc" Json="True">
       <Value Key="Template" Value="d2717071-2c1f-4acb-81c1-5f2f9461ad2e" Type="Entity" />
     </Entity>
+    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="529ba3a2-d7d4-4f40-a81b-ff819de03a9e" AttributeSetName="IsDefaultDecorator" EntityGUID="53752983-6c68-4bf6-89c2-705c9b95a0ba" Json="True" KeyGuid="d831e132-d352-4d35-a33b-19ca66aa157c" />
   </Entities>
   <PortalFiles />
   <PortalFolders>
