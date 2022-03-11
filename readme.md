@@ -38,3 +38,7 @@ https://papnkukn.github.io/qrcode-svg/ for an awesome JavaScript QR-Code Generat
 * v02.00 2021-10
     * Changed from tokens to Razor
     * Tested on Oqtane
+* v02.00.02 2022-03
+    * Updated License
+    * Changed default view
+    * Bugfix style file

@@ -49,6 +49,6 @@
     height = qrParams.Size
   };
 }
+
 <turnOn turn-on='{ "run": "window.appQr2.init()", "data": { "domId": "@qrDomId", "options": @Html.Raw(Convert.Json.ToJson(qrCodeOptions)) }}'></turnOn>
-<link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
 <script type="text/javascript" src="@App.Path/dist/scripts.min.js" data-enableoptimizations="bottom"></script>
