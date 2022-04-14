@@ -43,3 +43,5 @@ https://papnkukn.github.io/qrcode-svg/ for an awesome JavaScript QR-Code Generat
     * Changed default view
 * v02.00.02 2022-03
     * Bugfix style file
+* v02.01.00 2022-04 
+    * Changed all access to Services to ToSic.Sxc.Services

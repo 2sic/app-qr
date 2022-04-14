@@ -1,5 +1,6 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
+@using ToSic.Sxc.Services;
 @{
   // The view identifier determines if the code should be visible or only on printing
   var printOnly = CmsContext.View.Identifier == "print";
@@ -40,7 +41,7 @@
   var qrParams = Content.QrCodeSettings.EntityId != 0 ? Content.QrCodeSettings : App.Settings.QrCodeSettings;
 
   // Activate turnOn - see https://r.2sxc.org/turnon
-  GetService<ToSic.Sxc.Web.IPageService>().Activate("turnOn");
+  GetService<IPageService>().Activate("turnOn");
 
   // Passed to QrCode generation
   var qrCodeOptions = new {
