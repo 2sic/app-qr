@@ -40,8 +40,10 @@
   // Use either the qr-code settings of the current item or use the defaults
   var qrParams = Content.QrCodeSettings.EntityId != 0 ? Content.QrCodeSettings : App.Settings.QrCodeSettings;
 
+  var page = GetService<IPageService>();
+
   // Activate turnOn - see https://r.2sxc.org/turnon
-  GetService<IPageService>().Activate("turnOn");
+  page.Activate("turnOn");
 
   // Passed to QrCode generation
   var qrCodeOptions = new {
@@ -52,4 +54,4 @@
 }
 
 <turnOn turn-on='{ "run": "window.appQr2.init()", "data": { "domId": "@qrDomId", "options": @Html.Raw(Convert.Json.ToJson(qrCodeOptions)) }}'></turnOn>
-<script type="text/javascript" src="@App.Path/dist/scripts.min.js" data-enableoptimizations="bottom"></script>
+<script type="text/javascript" src="@App.Path/dist/scripts.min.js" @(page.AssetAttributes(position:"bottom" ))></script>
