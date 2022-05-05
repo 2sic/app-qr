@@ -45,3 +45,4 @@ https://papnkukn.github.io/qrcode-svg/ for an awesome JavaScript QR-Code Generat
     * Bugfix style file
 * v02.01.00 2022-04 
     * Changed all access to Services to ToSic.Sxc.Services
+    * Replaced data-enableoptimization with pageSvc.AssetAttributes()
