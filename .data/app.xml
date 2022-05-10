@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.03.00" ExportDate="2022-03-11T17:08:55.8167942+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.10.02" ExportDate="2022-05-10T13:38:29.7880277+02:00">
   <Header>
     <App Guid="1566f9d3-9580-4b0d-83de-51d34b04c5f7" />
     <Language Default="en-us" />
@@ -931,16 +931,16 @@
       <Value Key="RequiredDnnVersion" Value="07.04.02" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="02.02.00" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="03.01.00" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="12.05.00" Type="String">
+      <Value Key="RequiredVersion" Value="13.10.00" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="02.00.02" Type="String">
+      <Value Key="Version" Value="02.01.00" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1338,6 +1338,46 @@
       <Value Key="Template" Value="d2717071-2c1f-4acb-81c1-5f2f9461ad2e" Type="Entity" />
     </Entity>
     <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="529ba3a2-d7d4-4f40-a81b-ff819de03a9e" AttributeSetName="IsDefaultDecorator" EntityGUID="53752983-6c68-4bf6-89c2-705c9b95a0ba" Json="True" KeyGuid="d831e132-d352-4d35-a33b-19ca66aa157c" />
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="5e958dc6-2922-4d68-835c-7b9711538b12" AttributeSetName="NoteDecorator" EntityGUID="f155093e-9159-405c-afeb-c2286e4256c4" Json="True" KeyGuid="ed705f94-32f1-49ef-8d69-96f602b50cb5">
+      <Value Key="Note" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="NoteType" Value="note" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="empty" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="be34f64b-7d1f-4ad0-b488-dabbbb01a186" AttributeSetName="LightSpeedOutputDecorator" EntityGUID="6abe469f-17c0-4414-a6ef-b9e6826a039d" Json="True" KeyNumber="11">
+      <Value Key="Advanced" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="ByUrlParameters" Value="False" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Duration" Value="14400" Type="Number">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="DurationEditors" Value="300" Type="Number">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="DurationSystemAdmin" Value="300" Type="Number">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="DurationUsers" Value="-1" Type="Number">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="IsEnabled" Value="True" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="✅ - Users 14400s, Reg 🚫, Editors 300s, SysAdmins 300s" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="UrlParametersCaseSensitive" Value="False" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+    </Entity>
   </Entities>
   <PortalFiles />
   <PortalFolders>
