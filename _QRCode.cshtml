@@ -1,6 +1,5 @@
-@inherits Custom.Hybrid.Razor12
+@inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
-@using ToSic.Sxc.Services;
 @{
   // The view identifier determines if the code should be visible or only on printing
   var printOnly = CmsContext.View.Identifier == "print";
@@ -40,10 +39,8 @@
   // Use either the qr-code settings of the current item or use the defaults
   var qrParams = Content.QrCodeSettings.EntityId != 0 ? Content.QrCodeSettings : App.Settings.QrCodeSettings;
 
-  var pageSvc = GetService<IPageService>();
-
   // Activate turnOn - see https://r.2sxc.org/turnon
-  pageSvc.Activate("turnOn");
+  Kit.Page.Activate("turnOn");
 
   // Passed to QrCode generation
   var qrCodeOptions = new {
@@ -53,5 +50,5 @@
   };
 }
 
-<turnOn turn-on='{ "run": "window.appQr2.init()", "data": { "domId": "@qrDomId", "options": @Html.Raw(Convert.Json.ToJson(qrCodeOptions)) }}'></turnOn>
-<script type="text/javascript" src="@App.Path/dist/scripts.min.js" @pageSvc.AssetAttributes(position:"bottom" )></script>
+<turnOn turn-on='{ "run": "window.appQr2.init()", "data": { "domId": "@qrDomId", "options": @Html.Raw(Kit.Json.ToJson(qrCodeOptions)) }}'></turnOn>
+<script type="text/javascript" src="@App.Path/dist/scripts.min.js" @Kit.Page.AssetAttributes(position:"bottom" )></script>

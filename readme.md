@@ -46,3 +46,7 @@ https://papnkukn.github.io/qrcode-svg/ for an awesome JavaScript QR-Code Generat
 * v02.01.00 2022-04 
     * Changed all access to Services to ToSic.Sxc.Services
     * Replaced data-enableoptimization with pageSvc.AssetAttributes()
+* v02.02.00 2022-06 
+    * Replaced all the base classes with their 2sxc 14 equivalents
+    * Changed all GetService<> to the new ServiceKit14
+    * Updated webpack
