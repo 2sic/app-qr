@@ -15,7 +15,7 @@
   <a class="@qrDomId" href='@qrLink' target="_blank"></a>
   @if(Content.DisplayLinkOrTitle) {
     var displayText = Text.Has(Content.Title) ? Content.Title : Content.Link;
-    <div style="display: @Content.DisplayLinkOrTitle">@displayText</div>
+    <div>@displayText</div>
   }
 </div>
 
@@ -28,7 +28,7 @@
 
 @* These styles control the visibility of print-only QR-codes *@
 @if (printOnly) {
-  <style>
+  <style type="text/css">
     @@media screen { .app-qrcode2-print-only { display: none; } }
     @@media print  { .app-qrcode2-print-only { display: block; } }
   </style>
