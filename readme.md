@@ -34,19 +34,22 @@ https://papnkukn.github.io/qrcode-svg/ for an awesome JavaScript QR-Code Generat
 
 ## History
 
-* v01.00 ca. 2015
-* v02.00 2021-10
+* v.01.00 ca. 2015
+* v.02.00 2021-10
     * Changed from tokens to Razor
     * Tested on Oqtane
-* v02.00.01 2022-03
+* v.02.00.01 2022-03
     * Updated License
     * Changed default view
-* v02.00.02 2022-03
+* v.02.00.02 2022-03
     * Bugfix style file
-* v02.01.00 2022-04 
+* v.02.01.00 2022-04 
     * Changed all access to Services to ToSic.Sxc.Services
     * Replaced data-enableoptimization with pageSvc.AssetAttributes()
-* v02.02.00 2022-06 
+* v.02.02.00 2022-06 
     * Replaced all the base classes with their 2sxc 14 equivalents
     * Changed all GetService<> to the new ServiceKit14
     * Updated webpack
+* v.02.03 2023-02
+    * Replaced turnOn Tag with `Kit.Page.TurnOn`
+    * Removed _ from Filenames
