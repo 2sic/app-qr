@@ -52,5 +52,6 @@
   };
 }
 
+@* When the page is ready, run appQr2 init JS *@
 @Kit.Page.TurnOn("window.appQr2.init()", data: data)
 <script type="text/javascript" src="@App.Path/dist/scripts.min.js" @Kit.Page.AssetAttributes(position:"bottom" )></script>
