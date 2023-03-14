@@ -10,33 +10,25 @@
   // This ID is used to identify our unique code in the HTML DOM
   var qrDomId = "qr-code-js" + CmsContext.Module.Id;
 }
-
+@* URL and Title for the QR Code *@
 <div @Edit.TagToolbar(Content) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
   <a class="@qrDomId" href='@qrLink' target="_blank"></a>
   @if (Content.DisplayLinkOrTitle) {
-    var displayText = Text.Has(Content.Title) ? Content.Title : Content.Link;
+    var displayText = Text.First(Content.Title, Content.Link);
     <div>@displayText</div>
   }
 </div>
 
 @* Show a special message to admins if the QR-Code is invisible otherwise *@
 @if (printOnly && Edit.Enabled) {
-  <div class="alert alert-info" @Edit.TagToolbar(Content)>
-    @Resources.PrintQrAdminHint    
+  <div class="alert alert-info app-qrcode2-noprint" @Edit.TagToolbar(Content)>
+    @Resources.PrintQrAdminHint
   </div>
-}
-
-@* These styles control the visibility of print-only QR-codes *@
-@if (printOnly) {
-  <style type="text/css">
-    @@media screen { .app-qrcode2-print-only { display: none; } }
-    @@media print  { .app-qrcode2-print-only { display: block; } }
-  </style>
 }
 
 @* Include assets *@
 @{
-  // Use either the qr-code settings of the current item or use the defaults
+  // Generate the QR Code 
   var qrParams = Content.QrCodeSettings.EntityId != 0 ? Content.QrCodeSettings : App.Settings.QrCodeSettings;
 
   var data = new {
@@ -49,6 +41,7 @@
   };
 }
 
-@* When the page is ready, run appQr2 init JS *@
+@* When the page is ready, run appQr2 to init JS *@
 @Kit.Page.TurnOn("window.appQr2.init()", data: data)
-<script type="text/javascript" src="@App.Path/dist/scripts.min.js" @Kit.Page.AssetAttributes(position:"bottom" )></script>
+<script type="text/javascript" src="@App.Path/dist/scripts.min.js" @Kit.Page.AssetAttributes(position: "bottom")></script>
+<link rel="stylesheet" href="@App.Path/dist/styles.min.css">

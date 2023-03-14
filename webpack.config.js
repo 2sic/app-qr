@@ -2,10 +2,13 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: ['./src/ts/index.ts'],
+  entry: {
+    scripts: `./src/ts/index.ts`,
+    styles: `./src/scss/styles.scss`,      
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'scripts.min.js',
+    filename: '[name].min.js',
   },
   mode: 'production',
   devtool: 'source-map',
@@ -24,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles.min.css',
+      filename: '[name].min.css',
     }),
   ],
   module: {
