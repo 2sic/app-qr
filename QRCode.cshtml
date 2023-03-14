@@ -10,7 +10,7 @@
   // This ID is used to identify our unique code in the HTML DOM
   var qrDomId = "qr-code-js" + CmsContext.Module.Id;
 }
-@* URL and Title for the QR Code *@
+@* Add Infos for URL and Title to generate a  QR Code *@
 <div @Edit.TagToolbar(Content) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
   <a class="@qrDomId" href='@qrLink' target="_blank"></a>
   @if (Content.DisplayLinkOrTitle) {
