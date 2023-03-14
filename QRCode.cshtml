@@ -13,16 +13,16 @@
 
 <div @Edit.TagToolbar(Content) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
   <a class="@qrDomId" href='@qrLink' target="_blank"></a>
-  @if(Content.DisplayLinkOrTitle) {
+  @if (Content.DisplayLinkOrTitle) {
     var displayText = Text.Has(Content.Title) ? Content.Title : Content.Link;
     <div>@displayText</div>
   }
 </div>
 
 @* Show a special message to admins if the QR-Code is invisible otherwise *@
-@if(printOnly && Edit.Enabled) {
+@if (printOnly && Edit.Enabled) {
   <div class="alert alert-info" @Edit.TagToolbar(Content)>
-    @Resources.Get("PrintQrAdminHint")    
+    @Resources.PrintQrAdminHint    
   </div>
 }
 
@@ -39,16 +39,13 @@
   // Use either the qr-code settings of the current item or use the defaults
   var qrParams = Content.QrCodeSettings.EntityId != 0 ? Content.QrCodeSettings : App.Settings.QrCodeSettings;
 
-  // Passed to QrCode generation
-  var qrCodeOptions = new {
-    color = "#" + qrParams.Color.Trim('#'),
-    width = qrParams.Size,
-    height = qrParams.Size
-  };
-
   var data = new {
       domId = qrDomId,
-      options = qrCodeOptions
+      options = new {
+        color = "#" + qrParams.Color.Trim('#'),
+        width = qrParams.Size,
+        height = qrParams.Size
+      }
   };
 }
 
