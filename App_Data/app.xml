@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="14.09.00" ExportDate="2022-09-21T08:44:47.0944711+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.00.00" ExportDate="2023-05-03T15:29:21.2426819+02:00">
   <Header>
     <App Guid="1566f9d3-9580-4b0d-83de-51d34b04c5f7" />
     <Language Default="en-us" />
@@ -9,7 +9,7 @@
     </Dimensions>
   </Header>
   <AttributeSets>
-    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="System.App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Resources" Name="App-Resources" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="PrintQrAdminHint" Type="String" IsTitle="true">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="fe3886a2-30f4-4202-8908-7743610ddd96" Json="True" KeyNumber="4873">
@@ -63,7 +63,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="System.App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Settings" Name="App-Settings" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="dd2d6ed7-08ef-43bf-80f6-977e9d0a9164" Json="True" KeyNumber="4879">
@@ -137,7 +137,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="14ce1b3c-e00b-46de-8ae3-2819a6ea7a33" Name="Link" Description="Link" Scope="Default" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="14ce1b3c-e00b-46de-8ae3-2819a6ea7a33" Name="Link" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="5de9c126-4272-4649-af6e-a9f8d1206ac3" Json="True" KeyNumber="432">
@@ -414,7 +414,7 @@
             <Value Key="InputType" Value="wysiwyg" Type="String">
               <Dimension DimensionID="7" ReadOnly="false" />
             </Value>
-            <Value Key="RowCount" Value="1" Type="Number">
+            <Value Key="RowCount" Value="1.0" Type="Number">
               <Dimension DimensionID="7" ReadOnly="false" />
             </Value>
           </Entity>
@@ -557,7 +557,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" Name="QrCodeSettings" Description="QR Configuration" Scope="Default" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="d9576870-dc6a-4ac8-ab34-1eec47d7e8f1" Name="QrCodeSettings" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="7d5f5c58-8a95-405e-b753-2f20f52ccad7" Json="True" KeyNumber="435">
@@ -641,7 +641,7 @@
             </Value>
           </Entity>
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Number" AttributeSetName="@Number" EntityGUID="1a40ac94-af57-4c8a-8f1d-9840fc9c184a" Json="True" KeyNumber="436">
-            <Value Key="Decimals" Value="0" Type="Number">
+            <Value Key="Decimals" Value="0.0" Type="Number">
               <Dimension DimensionID="7" ReadOnly="false" />
             </Value>
           </Entity>
@@ -685,7 +685,7 @@
             <Value Key="InputType" Value="dropdown" Type="String">
               <Dimension DimensionID="7" ReadOnly="false" />
             </Value>
-            <Value Key="RowCount" Value="1" Type="Number">
+            <Value Key="RowCount" Value="1.0" Type="Number">
               <Dimension DimensionID="7" ReadOnly="false" />
             </Value>
           </Entity>
@@ -831,13 +831,13 @@
             </Value>
           </Entity>
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Number" AttributeSetName="@Number" EntityGUID="c5cfceb0-0499-4c74-9221-e8c0375a36be" Json="True" KeyNumber="440">
-            <Value Key="Decimals" Value="0" Type="Number">
+            <Value Key="Decimals" Value="0.0" Type="Number">
               <Dimension DimensionID="7" ReadOnly="false" />
             </Value>
-            <Value Key="Max" Value="10" Type="Number">
+            <Value Key="Max" Value="10.0" Type="Number">
               <Dimension DimensionID="7" ReadOnly="false" />
             </Value>
-            <Value Key="Min" Value="1" Type="Number">
+            <Value Key="Min" Value="1.0" Type="Number">
               <Dimension DimensionID="7" ReadOnly="false" />
             </Value>
           </Entity>
@@ -886,7 +886,7 @@
             <Value Key="InputType" Value="dropdown" Type="String">
               <Dimension DimensionID="7" ReadOnly="false" />
             </Value>
-            <Value Key="RowCount" Value="1" Type="Number">
+            <Value Key="RowCount" Value="1.0" Type="Number">
               <Dimension DimensionID="7" ReadOnly="false" />
             </Value>
           </Entity>
@@ -934,13 +934,13 @@
       <Value Key="RequiredOqtaneVersion" Value="03.01.00" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="14.09.00" Type="String">
+      <Value Key="RequiredVersion" Value="16.00.00" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="02.02.01" Type="String">
+      <Value Key="Version" Value="02.03" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
     </Entity>
@@ -987,7 +987,7 @@
       <Value Key="Name" Value="QR Code optionally showing URL or title" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="_QRCode.cshtml" Type="String">
+      <Value Key="Path" Value="QRCode.cshtml" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="PresentationTypeStaticName" Value="" Type="String">
@@ -1047,7 +1047,7 @@
       <Value Key="Name" Value="QR Print only (Invisible otherwise)" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="_QRCode.cshtml" Type="String">
+      <Value Key="Path" Value="QRCode.cshtml" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="PresentationTypeStaticName" Value="" Type="String">
@@ -1356,16 +1356,16 @@
       <Value Key="ByUrlParameters" Value="False" Type="Boolean">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Duration" Value="14400" Type="Number">
+      <Value Key="Duration" Value="14400.0" Type="Number">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="DurationEditors" Value="300" Type="Number">
+      <Value Key="DurationEditors" Value="300.0" Type="Number">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="DurationSystemAdmin" Value="300" Type="Number">
+      <Value Key="DurationSystemAdmin" Value="300.0" Type="Number">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="DurationUsers" Value="-1" Type="Number">
+      <Value Key="DurationUsers" Value="-1.0" Type="Number">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="IsEnabled" Value="True" Type="Boolean">
