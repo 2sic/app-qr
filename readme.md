@@ -6,9 +6,9 @@
 
 | Aspect              | Status | Comments or Version |
 | ------------------- | :----: | ------------------- |
-| 2sxc                | ✅    | requires 2sxc v15.03
-| Dnn                 | ✅    | For v7, v8 and v9
-| Oqtane 2            | ✅    | Requires v2.02
+| 2sxc                | ✅    | requires 2sxc v16.02
+| Dnn                 | ✅    | For v9.6.1+
+| Oqtane 2            | ✅    | Requires v3.04+
 | No jQuery           | ✅    | 
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/TCmnZ17h) on [azing.org](https://azing.org/2sxc)
@@ -36,20 +36,23 @@ https://papnkukn.github.io/qrcode-svg/ for an awesome JavaScript QR-Code Generat
 
 * v.01.00 ca. 2015
 * v.02.00 2021-10
-    * Changed from tokens to Razor
-    * Tested on Oqtane
+  * Changed from tokens to Razor
+  * Tested on Oqtane
 * v.02.00.01 2022-03
-    * Updated License
-    * Changed default view
+  * Updated License
+  * Changed default view
 * v.02.00.02 2022-03
-    * Bugfix style file
+  * Bugfix style file
 * v.02.01.00 2022-04 
-    * Changed all access to Services to ToSic.Sxc.Services
-    * Replaced data-enableoptimization with pageSvc.AssetAttributes()
+  * Changed all access to Services to ToSic.Sxc.Services
+  * Replaced data-enableoptimization with pageSvc.AssetAttributes()
 * v.02.02.00 2022-06 
-    * Replaced all the base classes with their 2sxc 14 equivalents
-    * Changed all GetService<> to the new ServiceKit14
-    * Updated webpack
+  * Replaced all the base classes with their 2sxc 14 equivalents
+  * Changed all GetService<> to the new ServiceKit14
+  * Updated webpack
 * v.02.03 2023-02
-    * Replaced turnOn Tag with `Kit.Page.TurnOn`
-    * Removed _ from Filenames
+  * Replaced turnOn Tag with `Kit.Page.TurnOn`
+  * Removed _ from Filenames
+* v02.04.00 2023-07
+  * 2sxc 16.02 coding conventions
+  * everything typed

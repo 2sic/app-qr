@@ -1,46 +1,56 @@
-@inherits Custom.Hybrid.Razor14
+@inherits Custom.Hybrid.RazorPro
 @using ToSic.Razor.Blade;
 @{
+
+  var qrInfo = MyItem;
+
   // The view identifier determines if the code should be visible or only on printing
-  var printOnly = CmsContext.View.Identifier == "print";
+  var printOnly = MyView.Identifier == "print";
 
   // sets qrlink to specified url  
-  var qrLink = Content.LinkCurrentPage ? Link.To(parameters: CmsContext.Page.Parameters) : Content.Link;
+  var qrLink = qrInfo.Bool("LinkCurrentPage") ? Link.To(parameters: MyPage.Parameters) : qrInfo.Url("Link");
 
   // This ID is used to identify our unique code in the HTML DOM
-  var qrDomId = "qr-code-js" + CmsContext.Module.Id;
+  var qrDomId = "qr-code-js" + MyContext.Module.Id;
 }
+
 @* Add Infos for URL and Title to generate a  QR Code *@
-<div @Edit.TagToolbar(Content) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
+<div @Kit.Edit.TagToolbar(qrInfo) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
   <a class="@qrDomId" href='@qrLink' target="_blank"></a>
-  @if (Content.DisplayLinkOrTitle) {
-    var displayText = Text.First(Content.Title, Content.Link);
+  @if (qrInfo.Bool("DisplayLinkOrTitle")) {
+    var displayText = Text.First(qrInfo.String("Title"), qrInfo.String("Link"));
     <div>@displayText</div>
   }
 </div>
 
 @* Show a special message to admins if the QR-Code is invisible otherwise *@
-@if (printOnly && Edit.Enabled) {
-  <div class="alert alert-info app-qrcode2-noprint" @Edit.TagToolbar(Content)>
-    @Resources.PrintQrAdminHint
+@if (printOnly && MyUser.IsContentAdmin) {
+  <div class="alert alert-info app-qrcode2-noprint" @Kit.Edit.TagToolbar(qrInfo)>
+    @App.Resources.String("PrintQrAdminHint")
   </div>
 }
 
 @* Include assets *@
 @{
-  // Generate the QR Code 
-  var qrParams = Content.QrCodeSettings.EntityId != 0 ? Content.QrCodeSettings : App.Settings.QrCodeSettings;
 
+
+
+  // Generate the QR Code 
+  var qrParams = qrInfo.Child("QrCodeSettings") ?? App.Settings.Child("QrCodeSettings");
+  var size = qrParams.Int("Size");
   var data = new {
       domId = qrDomId,
       options = new {
-        color = "#" + qrParams.Color.Trim('#'),
-        width = qrParams.Size,
-        height = qrParams.Size
+        color = "#" + qrParams.String("Color").Trim('#'),
+        width = size,
+        height = size
       }
   };
 }
 
+<script>
+  window.debugTurnOn = true;
+</script>
 @* When the page is ready, run appQr2 to init JS *@
 @Kit.Page.TurnOn("window.appQr2.init()", data: data)
 <script type="text/javascript" src="@App.Path/dist/scripts.min.js" @Kit.Page.AssetAttributes(position: "bottom")></script>
