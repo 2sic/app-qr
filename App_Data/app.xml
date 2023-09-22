@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.00.00" ExportDate="2023-05-03T15:29:21.2426819+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.07.00" ExportDate="2023-09-22T13:12:42.7542715+02:00">
   <Header>
     <App Guid="1566f9d3-9580-4b0d-83de-51d34b04c5f7" />
     <Language Default="en-us" />
@@ -928,19 +928,19 @@
       <Value Key="OriginalId" Value="" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredDnnVersion" Value="07.04.02" Type="String">
+      <Value Key="RequiredDnnVersion" Value="09.06.01" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="03.01.00" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="03.04.00" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="16.00.00" Type="String">
+      <Value Key="RequiredVersion" Value="16.04.00" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="02.03" Type="String">
+      <Value Key="Version" Value="02.03.00" Type="String">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1080,7 +1080,7 @@
       </Value>
     </Entity>
     <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="78dd36c5-25ef-42f5-97a0-37a7ee16dba4" Json="True">
-      <Value Key="Content" Value="null" Type="Entity" />
+      <Value Key="Content" Value="dedc90bc-3576-4a13-891a-aeea51441d8c" Type="Entity" />
       <Value Key="Presentation" Value="null" Type="Entity" />
       <Value Key="Template" Value="d831e132-d352-4d35-a33b-19ca66aa157c" Type="Entity" />
     </Entity>
@@ -1243,10 +1243,10 @@
       <Value Key="DisplayLinkOrTitle" Value="False" Type="Boolean">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="Link" Value="" Type="Hyperlink">
+      <Value Key="Link" Value="https://www.2sic.com/blog/post/behoerden-warnen-vor-influencergpt-von-2sic" Type="Hyperlink">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
-      <Value Key="LinkCurrentPage" Value="True" Type="Boolean">
+      <Value Key="LinkCurrentPage" Value="False" Type="Boolean">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
       <Value Key="NotesInternal" Value="" Type="String">
@@ -1377,6 +1377,54 @@
       <Value Key="UrlParametersCaseSensitive" Value="False" Type="Boolean">
         <Dimension DimensionID="7" ReadOnly="false" />
       </Value>
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="a362e31b-b95a-46e4-bc11-e6c10c25a4d6" Json="True">
+      <Value Key="Content" Value="7decde09-fd7d-4c5c-86d5-74d210424bbe" Type="Entity" />
+      <Value Key="Presentation" Value="null" Type="Entity" />
+      <Value Key="Template" Value="d831e132-d352-4d35-a33b-19ca66aa157c" Type="Entity" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="14ce1b3c-e00b-46de-8ae3-2819a6ea7a33" AttributeSetName="Link" EntityGUID="7decde09-fd7d-4c5c-86d5-74d210424bbe">
+      <Value Key="DisplayLinkOrTitle" Value="True" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Link" Value="" Type="Hyperlink">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="LinkCurrentPage" Value="True" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="NotesInternal" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="VarOverrideQrSettings" Value="False" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="14ce1b3c-e00b-46de-8ae3-2819a6ea7a33" AttributeSetName="Link" EntityGUID="dedc90bc-3576-4a13-891a-aeea51441d8c">
+      <Value Key="DisplayLinkOrTitle" Value="True" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Link" Value="https://www.2sic.com/blog/post/behoerden-warnen-vor-influencergpt-von-2sic" Type="Hyperlink">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="LinkCurrentPage" Value="False" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="NotesInternal" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="" Type="String">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+      <Value Key="VarOverrideQrSettings" Value="False" Type="Boolean">
+        <Dimension DimensionID="7" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="fc9f6e67-1803-47b2-a2e3-989f2ec97ff9" Json="True">
+      <Value Key="Template" Value="d831e132-d352-4d35-a33b-19ca66aa157c" Type="Entity" />
     </Entity>
   </Entities>
   <PortalFiles />
