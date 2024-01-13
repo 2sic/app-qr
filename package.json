@@ -9,19 +9,19 @@
   "author": "2sic internet solutions",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.0.0",
-    "@types/qrcode-svg": "^1.1.1",
-    "autoprefixer": "^10.4.7",
-    "css-loader": "^6.7.1",
-    "mini-css-extract-plugin": "^2.6.1",
-    "postcss-loader": "^7.0.0",
-    "sass": "^1.53.0",
-    "sass-loader": "^13.0.2",
-    "style-loader": "^3.3.1",
-    "ts-loader": "^9.3.1",
-    "typescript": "^4.7.4",
-    "webpack": "^5.73.0",
-    "webpack-cli": "^4.10.0"
+    "@types/node": "^20.11.0",
+    "@types/qrcode-svg": "^1.1.4",
+    "autoprefixer": "^10.4.16",
+    "css-loader": "^6.9.0",
+    "mini-css-extract-plugin": "^2.7.7",
+    "postcss-loader": "^7.3.4",
+    "sass": "^1.69.7",
+    "sass-loader": "^13.3.3",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "qrcode-svg": "^1.1.0"
