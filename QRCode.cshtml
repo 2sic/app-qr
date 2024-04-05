@@ -1,16 +1,18 @@
-@inherits Custom.Hybrid.RazorTyped
-@using ToSic.Razor.Blade;
+@inherits AppCode.Razor.AppRazor
+@using ToSic.Razor.Blade
+@using AppCode.Data
+
 @{
   // Get the QR-Code settings from the current item
-  var qrSettings = MyItem;
+  var qrSettings = As<Link>(MyItem); 
 
   // The view identifier determines if the code should be visible or only on printing
   var printOnly = MyView.Identifier == "print";
 
   // sets qrlink to specified url  
-  var qrLink = qrSettings.Bool("LinkCurrentPage")
+  var qrLink = qrSettings.LinkCurrentPage
     ? Link.To(parameters: MyPage.Parameters)
-    : qrSettings.Url("Link");
+    : qrSettings.Link;
 
   // This ID is used to identify our unique code in the HTML DOM
   var qrDomId = "qr-code-js" + UniqueKey;
@@ -19,8 +21,8 @@
 @* Add Infos for URL and Title to generate a  QR Code *@
 <div @Kit.Edit.TagToolbar(qrSettings) class='@(printOnly ? "app-qrcode2-print-only" : "")'>
   <a class="@qrDomId" href='@qrLink' target="_blank"></a>
-  @if (qrSettings.Bool("DisplayLinkOrTitle")) {
-    var displayText = Text.First(qrSettings.String("Title"), qrSettings.String("Link"));
+  @if (qrSettings.DisplayLinkOrTitle) {
+    var displayText = Text.First(qrSettings.Title, qrSettings.Link);
     <div>@displayText</div>
   }
 </div>
@@ -28,14 +30,14 @@
 @* Show a special message to admins if the QR-Code is invisible otherwise *@
 @if (printOnly && MyUser.IsContentAdmin) {
   <div class="alert alert-info app-qrcode2-noprint" @Kit.Edit.TagToolbar(qrSettings)>
-    @App.Resources.String("PrintQrAdminHint")
+    @App.Resources.PrintQrAdminHint
   </div>
 }
 
 @* Generate the QR Code *@
 @{
   // Get the settings from the current item, or fallback to App Settings
-  var qrParams = qrSettings.Child("QrCodeSettings") ?? App.Settings.Child("QrCodeSettings");
+  var qrParams = qrSettings.QrCodeSettings ?? App.Settings.QrCodeSettings;
   var size = qrParams.Int("Size");
   var data = new {
       domId = qrDomId,
