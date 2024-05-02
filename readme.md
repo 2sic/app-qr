@@ -4,9 +4,9 @@
 
 > This is a [2sxc](https://2sxc.org) App for [DNN ☢️](https://www.dnnsoftware.com/) and [Oqtane 💧](https://www.oqtane.org/)
 
-| Aspect              | Status | Comments or Version 
-| ------------------- | :----: | ------------------- 
-| 2sxc                | ✅    | requires 2sxc v17.06.02
+| Aspect              | Status | Comments or Version
+| ------------------- | :----: | -------------------
+| 2sxc                | ✅    | requires 2sxc v17.07.00
 | Dnn                 | ✅    | For v9.6.1+
 | Oqtane              | ✅    | Requires v04.00+
 | No jQuery           | ✅    |
@@ -56,6 +56,6 @@ The App uses inline-styles and style tags, which you can directly adjust in the 
 * v02.04.00 2023-07
   * 2sxc 16.02 coding conventions
   * everything typed
-* v02.04.17 2024-04
+* v02.17.00 2024-04
   * strong typed
   * Auto Generated Class
