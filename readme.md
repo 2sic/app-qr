@@ -59,3 +59,5 @@ The App uses inline-styles and style tags, which you can directly adjust in the 
 * v02.17.00 2024-04
   * strong typed
   * Auto Generated Class
+* v02.17.01 2024-07
+  * Update app.sln and app.csproj
