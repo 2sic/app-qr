@@ -1,4 +1,4 @@
-let QRCode = require('../../node_modules/qrcode-svg');
+import QRCode from 'qrcode-svg';
 
 interface QrCodeOptions {
     color: string;
@@ -8,8 +8,13 @@ interface QrCodeOptions {
 
 export function init({ domId, options }: { domId: string, options: QrCodeOptions }) {
     let qrDomObject = document.querySelector(`.${domId}`);
+    if (!qrDomObject) return;
+    
+    const href = qrDomObject.getAttribute("href");
+    if (!href) return;
+    
     let qrCode = new QRCode({
-        content: qrDomObject.getAttribute("href"),
+        content: href,
         color: options.color,
         width: options.width,
         height: options.height,
