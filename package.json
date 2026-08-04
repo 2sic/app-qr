@@ -11,14 +11,14 @@
   "author": "2sic internet solutions",
   "license": "ISC",
   "devDependencies": {
-    "@types/qrcode-svg": "^1.1.1",
-    "css-loader": "^6.7.1",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "sass": "^1.80.7",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.11",
-    "concurrently": "^9.2.1"
+    "@types/qrcode-svg": "^1.1.5",
+    "css-loader": "^7.1.4",
+    "autoprefixer": "^10.5.4",
+    "postcss": "^8.5.23",
+    "sass": "^1.102.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.1.5",
+    "concurrently": "^10.0.4"
   },
   "dependencies": {
     "qrcode-svg": "^1.1.0"

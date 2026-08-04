@@ -39,7 +39,7 @@ export default defineConfig({
       },
     },
 
-    minify: 'esbuild',
+    minify: 'oxc',
     target: 'es2020',
     cssCodeSplit: false,
 
