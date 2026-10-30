@@ -16,8 +16,8 @@
 | App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/qr-code-v2-hybrid-for-dnn-and-oqtane)
 | Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/qr-code-v2-hybrid-for-dnn-and-oqtane)
 | Best Practices      | ✅    | Uses v13.10 conventions
-| Bootstrap 3         | ✅    | No optimizations needed
-| Bootstrap 4         | ✅    | No optimizations needed
+| Bootstrap 3         | ❌    | Last supported in v02.21.02
+| Bootstrap 4         | ❌    | Last supported in v02.21.02
 | Bootstrap 5         | ✅    | No optimizations needed
 
 A 2sxc / DNN App to create custom QR Codes.
@@ -33,6 +33,10 @@ The App uses inline-styles and style tags, which you can directly adjust in the 
 <https://papnkukn.github.io/qrcode-svg/> for an awesome JavaScript QR-Code Generator
 
 ## History
+
+* v02.21.03 2026-10
+  * Removed Bootstrap 3 and Bootstrap 4 support; the app is now Bootstrap 5 only
+  * For Bootstrap 3 or Bootstrap 4, use v02.21.02
 
 * v.01.00 ca. 2015
 * v.02.00 2021-10
